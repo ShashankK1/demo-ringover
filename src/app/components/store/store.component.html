@@ -1,0 +1,163 @@
+<div class="store">
+    <div class="store-container">
+        <div class="filter-container">
+            <div class="cont">
+                <div class="filter-heading">
+                    <span class="filter-text">FILTERS</span>
+                    <img src="../../../assets/img/filter.png" class="filter-icon" alt="">
+                </div>
+                <div class="cost-container">
+                    <div class="heading-text">
+                        Cost
+                    </div>
+                    <div class="cost-checkbox">
+                        <div class="checkboox">
+                            <input type="checkbox" >
+                            <span class="text">Rs. 1500-4000</span>
+                        </div>
+                        <div class="checkboox">
+                            <input type="checkbox" >
+                            <span class="text">Rs. 4001-7000</span>
+                        </div>
+                        <div class="checkboox">
+                            <input type="checkbox" >
+                            <span class="text">Rs. 7001+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cost-container">
+                    <div class="heading-text">
+                        Colour
+                    </div>
+                    <div class="colour-container">
+                        <div class="color-rect a"></div>
+                        <div class="color-rect b"></div>
+                        <div class="color-rect c"></div>
+                        <div class="color-rect d"></div>
+                        <div class="color-rect e"></div>
+                    </div>
+                </div>
+                <div class="cost-container">
+                    <div class="heading-text design-text">
+                        Design templates
+                    </div>
+                    <div class="cost-checkbox">
+                        <div class="checkboox">
+                            <input type="checkbox" (change)="check1($event,1)">
+                            <span class="text">2</span>
+                        </div>
+                        <div class="checkboox" >
+                            <input type="checkbox" (change)="check1($event,2)">
+                            <span class="text">3</span>
+                        </div>
+                        <div class="checkboox">
+                            <input type="checkbox" (change)="check1($event,3)">
+                            <span class="text">3+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cost-container">
+                    <div class="heading-text design-text">
+                        Type
+                    </div>
+                    <div class="cost-checkbox">
+                        <div class="checkboox">
+                            <input type="checkbox" (change)="check2($event,1)">
+                            <span class="text">Loafers</span>
+                        </div>
+                        <div class="checkboox">
+                            <input type="checkbox" (change)="check2($event,2)">
+                            <span class="text">Sneakers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="btn" (click)="process()">Apply</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="shoes-container">
+            <div class="cont">
+                
+                <div class="shoe-header">
+
+                    <span class="filter-text">SHOES</span>
+                    <div class="icons-shoes">
+                        <img src="../../../assets/img/search.png" class="sort" alt="">
+                        <button class="sort-btn">sort by</button>
+                    </div>
+                </div>
+                
+                <div class="shoe-body">
+                    <ng-container *ngFor="let shoe of shoesDescription">
+                        <div  class="shoe-desc" *ngIf="filter(shoe) || defaultFilter" (click)="addToCart(shoe)">
+                            <img src="../../../assets/img/shoe.jpg" class="shoe" alt="">
+                            <span class="name">{{shoe.name}}</span>
+                            <div class="rate">
+                                <span class="price">Rs. {{shoe.cost}}/-</span>
+                                <span class="stars">
+                                    <img src="../../../assets/img/fullstar.png" 
+                                    class="full-star" *ngFor="let s of counter(shoe.fullstars)">
+                                    <img src="../../../assets/img/half2.png" alt="" class="full-star"
+                                    *ngFor="let s of counter(shoe.halfstars)">
+                                    <img src="../../../assets/img/no-star.png" alt="" class="full-star"
+                                    *ngFor="let s of counter(shoe.nostar)">
+                                </span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cont">
+                <div class="cart-1">
+
+                    <div class="cart-heading">
+                        <span class="filter-text">CART</span>
+                        <img src="../../../assets/img/cart.png" class="cart" alt="">
+                    </div>
+                    <div class="cart-body">
+                        <span *ngIf="!cartActive">Click On Products to add to cart</span>
+                        <div *ngFor="let order of cart | keyvalue">
+                            <div class="img-cart">
+                                <img src="../../../assets/img/shoe.jpg" class="shoe" alt="">
+                            </div>
+                            <div class="cart-orders">
+
+                                <span class="order-name">
+                                    {{order.key}}
+                                </span>
+                                <span class="order-quantity">
+                                    Quantity:{{order.value}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-end">
+                        
+                        <div class="cart-icons">
+                            <div class="loc">
+
+                                <img src="../../../assets/img/location.png" class="cart" alt="">
+                                <span class="home">Home</span>
+                            </div>
+                            <div class="cal">
+
+                                <img src="../../../assets/img/calendar.png" class="cart" alt="">
+                                <span>select date</span>
+                            </div>
+                        </div>
+                        <div class="cart-button">
+                            <button class="button">
+                                order now
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

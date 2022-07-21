@@ -1,0 +1,32 @@
+<div class="header">
+    <div class="header-icon">
+        <img class="website-logo" src="./assets/img//websitelogo.png">
+    </div>
+    <div class="header-tabs">
+        <div class="tabs">
+            <div class="home" id="home" [ngClass]="(routeMap.get('home')==='selected')?'selected-tab':''" (click)="selectTabs('home')">
+                <span >HOME</span>
+            </div>
+            <div class="journey" id="journey" [ngClass]="(routeMap.get('journey')==='selected')?'selected-tab':''"
+            (click)="selectTabs('journey')">
+                <span>THE JOURNEY</span>
+            </div>
+            <div class="team" id="team" [ngClass]="(routeMap.get('team')==='selected')?'selected-tab':''"
+            (click)="selectTabs('team')">
+                <span>TEAM</span>
+            </div>
+            <div class="store" id="store" [ngClass]="(routeMap.get('store')==='selected')?'selected-tab':''"
+            (click)="selectTabs('store')">
+                <span>STORE</span>
+            </div>
+            <div class="contact" id="contact" [ngClass]="(routeMap.get('contact')==='selected')?'selected-tab':''"
+            (click)="selectTabs('contact')">
+                <span>CONTACT</span>
+            </div>
+        </div>
+    </div>
+    <div class="header-profile">
+        <img src="../../../assets/img/profile.png" alt="" class="profile">
+        GAGAN
+    </div>
+</div>

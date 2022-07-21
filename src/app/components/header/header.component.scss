@@ -1,0 +1,188 @@
+.header{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    .header-icon{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        .website-logo{
+            width: 40px;
+            height: auto;
+        }
+    }
+    
+    .header-tabs{
+        flex-grow: 2;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tabs{
+            display: flex;
+            column-gap: 32px;
+            .home,.journey,.team,.store,.contact{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .header-profile{
+        display: flex;
+        column-gap: 13px;
+        justify-content: center;
+        flex-grow: 1;
+    }
+}
+
+
+
+.circle-profile{
+    margin-right: 8px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.contact::after{
+    content: '';
+    display: block;
+    opacity: 0;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+.home::after{
+    content: '';
+    display: block;
+    opacity: 0;
+    position: relative;
+
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+.journey::after{
+    content: '';
+    display: block;
+    opacity: 0;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+.team::after{
+    content: '';
+    display: block;
+    opacity: 0;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+.store::after{
+    content: '';
+    display: block;
+    opacity: 0;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+
+.contact:hover::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    animation-name: slide;
+    animation-duration: 1s;
+}
+.home:hover::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+
+    width: 70%;
+    height: 0px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    animation-name: slide;
+    animation-duration: 1s;
+}
+.journey:hover::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    animation-name: slide;
+    animation-duration: 1s;
+}
+.team:hover::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    animation-name: slide;
+    animation-duration: 1s;
+}
+.store:hover::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    animation-name: slide;
+    animation-duration: 1s;
+}
+.selected-tab::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+@keyframes slide {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+.profile{
+    margin-top: -3px;
+    width: 24px;
+}

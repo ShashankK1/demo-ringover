@@ -1,0 +1,47 @@
+.contact-content{
+    background-image: url(../../../assets/img/chain-png-transparent-2.png);
+    background-position: 20%;
+    background-repeat:repeat-x;
+    font-family:sans-serif;
+    .mid-card{
+        background-color: white;
+        z-index: 100;
+        row-gap: 40px;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 420px;
+        width: 340px;
+        box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.small{
+    font-size: small;
+}
+.big{
+    font-size: larger;
+    font-weight: 500;
+}
+.text{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+    font-weight: 530;
+}
+.three-icon{
+    display: flex;
+    margin-top: 6px;
+    justify-content: center;
+    img{
+        width: 22px;
+        height: 22px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}

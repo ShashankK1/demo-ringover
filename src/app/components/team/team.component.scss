@@ -1,0 +1,77 @@
+.text-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 12vh;
+    flex-wrap: wrap;
+    .text{
+        font-size: 2vw;
+        font-family:sans-serif;
+        font-weight:500;
+    }
+}
+.card{
+    height: 270px;
+    width: 160px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 12px;
+    .img{
+        width: 100%;
+        height: 150px;
+    }
+    
+}
+
+.team-container{
+    background-image: url(../../../assets/img/chain-png-transparent-2.png);
+    background-position: 20%;
+    background-repeat:repeat-x;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.team-1{
+    display: flex;
+    column-gap: 50px;
+}
+.team-2{
+    display: flex;
+    column-gap: 50px;
+}
+
+.card-text{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .person{
+        font-family: sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .designation{
+        font-family: sans-serif;
+        font-size: 0.8rem;
+    }
+}
+
+.card-icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+    column-gap: 14px;
+    .social{
+        width: 20px;
+    }
+    
+}
+
+.last-text{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+}
